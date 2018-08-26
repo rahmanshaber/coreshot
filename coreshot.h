@@ -23,10 +23,9 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <QWidget>
 #include <QPixmap>
 
-#include "utilities.h"
-#include "globalfunctions.h"
-#include "settingsmanage.h"
-
+#include <cprime/utilities.h>
+#include <cprime/globalfunctions.h>
+#include <cprime/settingsmanage.h>
 
 namespace Ui {
 class coreshot;
