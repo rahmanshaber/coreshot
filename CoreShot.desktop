@@ -2,7 +2,7 @@
 Name=CoreShot
 Comment=CoreShot is screen capture app from CoreApps.
 Exec=coreshot
-Icon=/usr/share/icons/CoreApps/CoreShot.svg
+Icon=/usr/share/coreapps/icons/CoreShot.svg
 Type=Application
 Categories=Utility;Graphics;Viewer;Qt;
 Terminal=false
