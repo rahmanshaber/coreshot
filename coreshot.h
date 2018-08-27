@@ -27,6 +27,7 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <cprime/globalfunctions.h>
 #include <cprime/settingsmanage.h>
 
+
 namespace Ui {
 class coreshot;
 }
@@ -42,12 +43,12 @@ public:
     void setPixmap(QPixmap &pix);
 
 private slots:
-    void on_openInCorePaint_clicked();
     void on_save_clicked();
     void on_saveAs_clicked();
     void on_cancel_clicked();
     void on_newShot_clicked();
-    void on_openInCoreImage_clicked();
+    void on_openInEditor_clicked();
+    void on_openInViewer_clicked();
 
 private:
     Ui::coreshot *ui;

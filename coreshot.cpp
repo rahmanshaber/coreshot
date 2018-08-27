@@ -43,17 +43,6 @@ void coreshot::setPixmap(QPixmap &pix)
     ui->shotPreview->setOriginalPixmap(pix);
 }
 
-void coreshot::on_openInCorePaint_clicked()
-{
-    QString fileName = sm.getSCSaveLocation() + "/Screenshot_" + QDateTime::currentDateTime().toString("yyyy-MM-dd_hh-mm-ss") + ".png";
-    QFile file(fileName);
-    ui->shotPreview->originalPixmap().save(&file, "PNG");
-    file.close();
-    files = fileName;
-    GlobalFunc::appEngines("CorePaint", files);
-    this->close();
-}
-
 void coreshot::on_save_clicked()
 {
     QString fileName = sm.getSCSaveLocation();
@@ -92,7 +81,18 @@ void coreshot::on_newShot_clicked()
     this->close();
 }
 
-void coreshot::on_openInCoreImage_clicked()
+void coreshot::on_openInEditor_clicked()
+{
+    QString fileName = sm.getSCSaveLocation() + "/Screenshot_" + QDateTime::currentDateTime().toString("yyyy-MM-dd_hh-mm-ss") + ".png";
+    QFile file(fileName);
+    ui->shotPreview->originalPixmap().save(&file, "PNG");
+    file.close();
+    files = fileName;
+    GlobalFunc::appEngine(GlobalFunc::Category::ImageEditor, files);
+    this->close();
+}
+
+void coreshot::on_openInViewer_clicked()
 {
     QString fileName = sm.getSCSaveLocation() + "/Screenshot_" + QDateTime::currentDateTime().toString("yyyy-MM-dd_hh-mm-ss") + ".png";
     QFile file(fileName);

@@ -78,19 +78,19 @@
       </spacer>
      </item>
      <item>
-      <widget class="QToolButton" name="openInCoreImage">
+      <widget class="QToolButton" name="openInViewer">
        <property name="text">
-        <string>Open in CoreImage</string>
+        <string>Open in Viewer</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="openInCorePaint">
+      <widget class="QToolButton" name="openInEditor">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
        <property name="text">
-        <string>Open in Corepaint</string>
+        <string>Open in Editor</string>
        </property>
       </widget>
      </item>
