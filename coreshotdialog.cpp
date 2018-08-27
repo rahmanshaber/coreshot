@@ -23,7 +23,7 @@ coreshotdialog::coreshotdialog(QWidget *parent) :QWidget(parent),ui(new Ui::core
     ui->setupUi(this);
 
     // set stylesheet from style.qrc
-    setStyleSheet(Utilities::getStylesheetFileContent(":/appStyle/style/Dialog.qss"));
+    setStyleSheet(Utilities::getStylesheetFileContent(Utilities::StyleAppName::DialogStyle));
 
     startsetup();
 
@@ -82,7 +82,7 @@ void coreshotdialog::passToShotPreview()
     coreshot *shootP = new coreshot();
     shootP->setPixmap(m_pixmap);
     shootP->show();
-    deleteLater();
+    this->close();
 }
 
 void coreshotdialog::shootFullScreen()
