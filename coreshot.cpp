@@ -88,7 +88,7 @@ void coreshot::on_openInEditor_clicked()
     ui->shotPreview->originalPixmap().save(&file, "PNG");
     file.close();
     files = fileName;
-    GlobalFunc::appEngine(GlobalFunc::Category::ImageEditor, files);
+    GlobalFunc::appEngine(GlobalFunc::Category::ImageEditor, files,this);
     this->close();
 }
 
@@ -99,6 +99,6 @@ void coreshot::on_openInViewer_clicked()
     ui->shotPreview->originalPixmap().save(&file, "PNG");
     file.close();
     files = fileName;
-    GlobalFunc::appEngine(GlobalFunc::Category::ImageViewer, files);
+    GlobalFunc::appEngine(GlobalFunc::Category::ImageViewer, files,this);
     this->close();
 }
