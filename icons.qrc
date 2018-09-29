@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>icons/CoreShot.svg</file>
         <file>icons/close.svg</file>
+        <file>icons/coreshot.svg</file>
     </qresource>
 </RCC>

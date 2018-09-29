@@ -1,8 +1,8 @@
 # CoreShot
 An app of CoreApps family.CoreShot is screen capture app.
 
-<img src="CoreShot1.png" width="500">
-<img src="CoreShot2.png" width="500">
+<img src="coreshot1.png" width="500">
+<img src="coreshot2.png" width="500">
 
 ### Download
 
