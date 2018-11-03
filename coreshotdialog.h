@@ -30,7 +30,7 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <X11/Xatom.h>
 #include <QMimeDatabase>
 
-#include <cprime/utilities.h>
+#include <cprime/themefunc.h>
 
 
 namespace Ui {

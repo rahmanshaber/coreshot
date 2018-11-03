@@ -23,11 +23,11 @@ coreshot::coreshot(QWidget *parent) :QWidget(parent),ui(new Ui::coreshot)
     ui->setupUi(this);
 
     // set stylesheet from style.qrc
-    setStyleSheet(Utilities::getStylesheetFileContent(Utilities::StyleAppName::CoreShotStyle));
+    setStyleSheet(CPrime::ThemeFunc::getStyleSheetFileContent(CPrime::StyleTypeName::CoreShotStyle));
 
     // set window size
-    int x = static_cast<int>(Utilities::screensize().width()  * .55);
-    int y = static_cast<int>(Utilities::screensize().height()  * .6);
+    int x = static_cast<int>(CPrime::InfoFunc::screenSize().width()  * .8);
+    int y = static_cast<int>(CPrime::InfoFunc::screenSize().height()  * .7);
     this->resize(x, y);
 
     files = "";
@@ -51,7 +51,7 @@ void coreshot::on_save_clicked()
     file.close();
     files = fileName;
     // Function from utilities.cpp
-    Utilities::messageEngine("Screenshot Saved", Utilities::MessageType::Info);
+    CPrime::InfoFunc::messageEngine("Screenshot Saved", CPrime::MessageType::Info,this);
     this->close();
 }
 
@@ -65,7 +65,7 @@ void coreshot::on_saveAs_clicked()
     file.close();
     files = filename;
     // Function from utilities.cpp
-    Utilities::messageEngine("Screenshot Saved", Utilities::MessageType::Info);
+    CPrime::InfoFunc::messageEngine("Screenshot Saved", CPrime::MessageType::Info,this);
     this->close();
 }
 
@@ -88,7 +88,7 @@ void coreshot::on_openInEditor_clicked()
     ui->shotPreview->originalPixmap().save(&file, "PNG");
     file.close();
     files = fileName;
-    GlobalFunc::appEngine(GlobalFunc::Category::ImageEditor, files,this);
+    CPrime::AppOpenFunc::appEngine(CPrime::Category::ImageEditor, files,this);
     this->close();
 }
 
@@ -99,6 +99,6 @@ void coreshot::on_openInViewer_clicked()
     ui->shotPreview->originalPixmap().save(&file, "PNG");
     file.close();
     files = fileName;
-    GlobalFunc::appEngine(GlobalFunc::Category::ImageViewer, files,this);
+    CPrime::AppOpenFunc::appEngine(CPrime::Category::ImageViewer, files,this);
     this->close();
 }

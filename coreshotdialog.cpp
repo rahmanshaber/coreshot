@@ -23,7 +23,7 @@ coreshotdialog::coreshotdialog(QWidget *parent) :QWidget(parent),ui(new Ui::core
     ui->setupUi(this);
 
     // set stylesheet from style.qrc
-    setStyleSheet(Utilities::getStylesheetFileContent(Utilities::StyleAppName::DialogStyle));
+    setStyleSheet(CPrime::ThemeFunc::getStyleSheetFileContent(CPrime::StyleTypeName::DialogStyle));
 
     startsetup();
 
@@ -31,8 +31,8 @@ coreshotdialog::coreshotdialog(QWidget *parent) :QWidget(parent),ui(new Ui::core
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint );
 
     // Set the window position
-    int mx = (Utilities::screensize().width()/2) - ((this->width()/2) + 10);
-    int my = Utilities::screensize().height() - (this->height() + 10);
+    int mx = (CPrime::InfoFunc::screenSize().width()/2) - ((this->width()/2) + 10);
+    int my = CPrime::InfoFunc::screenSize().height() - (this->height() + 10);
     this->move(mx, my);
 }
 
